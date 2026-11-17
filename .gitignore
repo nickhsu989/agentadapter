@@ -1,0 +1,32 @@
+# --- Secrets / credentials (never commit these) ---
+.env
+.env.*
+*.key
+*.pem
+*credentials*
+.colab-secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# --- Jupyter / Colab ---
+.ipynb_checkpoints/
+
+# --- Local session artifacts ---
+workspace/
+content/
+*.zip
+proxy.log
+
+# --- Tool state that belongs to machines, not repos ---
+.claude/
+.opencode/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini

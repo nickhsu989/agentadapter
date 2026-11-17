@@ -1,0 +1,42 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:8787",
+    "ANTHROPIC_AUTH_TOKEN": "nim-local",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "nvidia/nemotron-3-ultra-550b-a55b",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-ai/deepseek-v4.1-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "z-ai/glm-5.3-flash",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "stepfun-ai/step-5-preview",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "1000000",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "model": "fable",
+  "modelSettings": {
+    "claude-haiku-5-5": {
+      "effortLevel": "medium"
+    },
+    "stepfun-ai/step-5-preview": {
+      "effortLevel": "high"
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "theme": "dark",
+  "autoMode": {
+    "allow": [
+      "$defaults"
+    ],
+    "soft_deny": [
+      "$defaults"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Cloud region(s)**: None configured",
+      "**Cloud account(s)**: None configured",
+      "**Cloud service(s)**: None configured",
+      "**Cloud resource(s)**: None configured"
+    ]
+  }
+}

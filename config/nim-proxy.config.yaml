@@ -1,0 +1,41 @@
+# Non-secret configuration for nvd-claude-nim (Anthropic Messages -> NVIDIA NIM).
+# Deployed by colab_setup.py to ~/.config/nvd-claude-nim/config.yaml.
+# Secrets (NVIDIA_API_KEY) are delivered via the environment, never in this file.
+
+server:
+  # 0.0.0.0 so the Windows claude.exe can reach this over WSL localhost forwarding.
+  # On Colab only localhost matters, but 0.0.0.0 is harmless there.
+  host: 0.0.0.0
+  port: 8787
+  log_level: info
+
+nvidia:
+  base_url: https://integrate.api.nvidia.com/v1
+  default_model: z-ai/glm-5.3-flash
+
+streaming:
+  ping_interval: 15.0
+  text_delta_chars: 6
+
+# Safety net: map Claude model IDs Claude Code may still emit (background
+# calls, /model aliases, older versions) onto the NIM model we actually have.
+model_aliases:
+  # haiku family
+  claude-3-5-haiku-20241022: z-ai/glm-5.3-flash
+  claude-haiku-4-5: z-ai/glm-5.3-flash
+  claude-haiku-4-5-20251001: z-ai/glm-5.3-flash
+  # sonnet family
+  claude-3-5-sonnet-20241022: z-ai/glm-5.3-flash
+  claude-3-7-sonnet-20250219: z-ai/glm-5.3-flash
+  claude-sonnet-4-20250514: z-ai/glm-5.3-flash
+  claude-sonnet-4-5: z-ai/glm-5.3-flash
+  claude-sonnet-4-5-20250929: z-ai/glm-5.3-flash
+  claude-sonnet-5-5: z-ai/glm-5.3-flash
+  # opus family
+  claude-3-5-opus-20240620: z-ai/glm-5.3-flash
+  claude-opus-4-1: z-ai/glm-5.3-flash
+  claude-opus-4-5: z-ai/glm-5.3-flash
+  # anything Claude Code asks for by these short aliases
+  haiku: z-ai/glm-5.3-flash
+  sonnet: z-ai/glm-5.3-flash
+  opus: z-ai/glm-5.3-flash

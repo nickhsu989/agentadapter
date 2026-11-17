@@ -1,0 +1,6 @@
+# Python dependencies for the Colab bootstrap.
+#
+# uv is used to install nvd-claude-nim (the Anthropic -> NVIDIA NIM proxy)
+# as a managed CLI tool. OpenCode is installed via its official shell
+# installer and Claude Code via npm, so neither appears here.
+uv>=0.5
